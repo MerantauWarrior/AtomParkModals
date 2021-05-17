@@ -70,7 +70,16 @@ img{
     line-height: 21px;
     text-decoration: none;
     color: #FFFFFF;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
     cursor: pointer;
+}
+.ap-modal-window__btn:hover{
+    background-color: #F7B916;
+    color: #1062AA;
 }
 /*modal 1-2*/
 .ap-modal-window-sm{
