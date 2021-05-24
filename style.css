@@ -81,6 +81,33 @@ img{
     background-color: #F7B916;
     color: #1062AA;
 }
+.ap-modal-window__btn-empty{
+    width: 200px;
+    color: #1062AA;
+    background-color: #fff;
+    border: 1px solid #1062AA;
+}
+.ap-modal-window__btn-empty:hover{
+    background-color: #1062AA;
+    color: #FFFFFF;
+}
+.ap-modal-window__btn-transparent{
+    margin-top: 18px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #81859C;
+    text-decoration: none;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+.ap-modal-window__btn-transparent:hover{
+    color: #1062AA;
+}
 /*modal 1-2*/
 .ap-modal-window-sm{
     width: 100%;
@@ -146,7 +173,106 @@ img{
     top: 0;
     left: 0;
 }
-
+/*basket modals*/
+.ap-modal-window-basket{
+    width: 100%;
+    max-width: 560px;
+    padding-top: 55px;
+    padding-bottom: 68px;
+}
+.ap-modal-window-basket--lg{
+    max-width: 650px;
+}
+.ap-modal-window-basket__img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.ap-modal-window-basket__text{
+    text-align: center;
+    margin-bottom: 35px;
+}
+.ap-modal-window-basket__title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    color: #333333;
+}
+.ap-modal-window-basket__promo{
+    font-size: 18px;
+    line-height: 30px;
+    color: #333333;
+}
+.ap-modal-window-basket__promo-gray{
+    color: #81859C;
+}
+.ap-modal-window-basket__promo span{
+    font-weight: 700;
+}
+/*modal 7*/
+.ap-modal-window-7-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 30px;
+    color: #1062AA;
+}
+.ap-modal-window-7-text span{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #F7B916;
+    color: #333333;
+}
+.ap-modal-window-7-text span:after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+    background-color: #F7B916;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+/*modal 8*/
+.ap-modal-window-8-text{
+    margin: 11px 0;
+    font-size: 21px;
+    line-height: 30px;
+    color: #333333;
+}
+.ap-modal-window-8-sale{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #1062AA;
+}
+.ap-modal-window-8__btns{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.ap-modal-window-8__btns .ap-modal-window__btn{
+    margin: 0 11px;
+}
+/*modal 9*/
+.ap-modal-window-9__btns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
 @media all and (min-width: 320px) and (max-width: 767px){
     .ap-modal-window{
@@ -159,9 +285,54 @@ img{
         font-size: 26px;
         line-height: 30px;
     }
+    .ap-modal-window-basket{
+        padding: 30px 15px;
+    }
+    .ap-modal-window-basket__img{
+        margin-bottom: 20px;
+    }
+    .ap-modal-window-basket__text{
+        margin-bottom: 20px;
+    }
+    .ap-modal-window-7-text{
+        margin: 10px 0;
+    }
+    .ap-modal-window-7-text span{
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        color: inherit;
+    }
+    .ap-modal-window-7-text span:after{
+        display: none;
+    }
+    .ap-modal-window-8-text{
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+    .ap-modal-window-8__btns{
+        flex-direction: column;
+        align-items: center;
+    }
+    .ap-modal-window-8__btns .ap-modal-window__btn-empty{
+        order: 2;
+        width: auto;
+        height: auto;
+        margin-top: 12px;
+        border: none;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #81859C;
+    }
+    .ap-modal-window-8__btns .ap-modal-window__btn-empty:hover{
+        background-color: transparent;
+        color: #1062AA;
+    }
 }
 @media all and (min-width: 320px) and (max-width: 767px) and (orientation: landscape){
     .ap-modal-window{
         max-height: 90vh;
+        overflow-y: auto;
     }
 }
