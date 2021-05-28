@@ -10,6 +10,14 @@ img{
     display: block;
     max-width: 100%;
 }
+.ap-modal-window-wrapper{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+}
 .ap-modal-window{
     position: fixed;
     top: 50%;
@@ -50,6 +58,23 @@ img{
     border-radius: 45px;
     font-family: 'Roboto', sans-serif;
 }
+.ap-modal-window__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: none;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    cursor: pointer;
+}
 .ap-modal-window__inp{
     margin-bottom: 20px;
     border: 2px solid #1062AA;
@@ -58,28 +83,21 @@ img{
     text-align: center;
     outline: none;
 }
-.ap-modal-window__btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border: none;
+.ap-modal-window__btn-blue{
     background-color: #1062AA;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    text-decoration: none;
     color: #FFFFFF;
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -ms-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s;
-    cursor: pointer;
 }
-.ap-modal-window__btn:hover{
+.ap-modal-window__btn-blue:hover{
     background-color: #F7B916;
     color: #1062AA;
+}
+.ap-modal-window__btn-yellow{
+    background-color: #FFE735;
+    color: #333333;
+}
+.ap-modal-window__btn-yellow:hover{
+    background-color: #1062AA;
+    color: #FFFFFF;
 }
 .ap-modal-window__btn-empty{
     width: 200px;
@@ -273,6 +291,91 @@ img{
     align-items: center;
     width: 100%;
 }
+/*modal 10*/
+.ap-modal-window-cart{
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 15px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #1062AA;
+}
+.ap-modal-window-cart--md{
+    max-width: 550px;
+}
+.ap-modal-window-cart__img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.ap-modal-window-cart__title{
+    margin-bottom: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #333333;
+}
+.ap-modal-window-cart__btns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+}
+.ttu{
+    text-transform: uppercase;
+}
+.txt-red{
+    color: #EF5237;
+}
+.ap-modal-window-cart__text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 31px;
+    text-align: center;
+    color: #333333;
+}
+.ap-modal-window-cart__timer{
+    color: #EF5237;
+}
+.ap-modal-window-cart__text a,
+.ap-modal-window-cart__text .link{
+    color: #1062AA;
+    text-decoration: none;
+}
+.ap-modal-window-cart__title-big{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+    text-align: center;
+    color: #333333;
+}
+.ap-modal-window-cart__text-2{
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #333333;
+}
+.ap-modal-window-cart--blue{
+    padding: 103px 15px;
+    background-color: #1062AA;
+}
+.ap-modal-window-cart--blue .ap-modal-window-cart__title-big{
+    color: #FFE735;
+}
+.ap-modal-window-cart--blue .ap-modal-window-cart__text-2{
+    color: #FFFFFF;
+}
+.ap-modal-window-cart--blue .ap-modal-window__btn-yellow:hover{
+    background-color: #fff;
+    color: #333333;
+}
 
 @media all and (min-width: 320px) and (max-width: 767px){
     .ap-modal-window{
@@ -328,6 +431,10 @@ img{
     .ap-modal-window-8__btns .ap-modal-window__btn-empty:hover{
         background-color: transparent;
         color: #1062AA;
+    }
+    .ap-modal-window-cart__text div,
+    .ap-modal-window-cart__text-2 div{
+        display: inline;
     }
 }
 @media all and (min-width: 320px) and (max-width: 767px) and (orientation: landscape){
