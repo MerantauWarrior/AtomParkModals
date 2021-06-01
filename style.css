@@ -376,6 +376,7 @@ img{
     background-color: #fff;
     color: #333333;
 }
+
 @media all and (min-width: 320px) and (max-width: 767px){
     .ap-modal-window{
         width: 90%;
